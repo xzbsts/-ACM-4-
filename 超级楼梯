@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+int f(int x) {
+    if (x <= 3) return (x-1);
+    else return f(x - 1) + f(x - 2);
+}
+int main() {
+    int n;
+    while (scanf("%d", &n) != EOF) {
+        while (n--) {
+            int m;
+            scanf("%d", &m);
+            int c = 0;
+            c = f(m);
+            printf("%d\n", c);
+        }
+    }
+    return 0;
+}

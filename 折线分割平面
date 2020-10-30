@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<algorithm>
+int main()
+{
+    int t;
+
+    scanf("%d",&t);
+    while (t--)
+    {
+        int n;
+        scanf("%d",&n);
+        long long ans;
+        if (n == 1)
+            ans = 2;
+        else if (n == 2)
+            ans = 7;
+        else
+            ans = (2 * n - 1) * (2 * n - 2) / 2 + 2 * n;
+        printf("%lld\n", ans);
+    }
+    return 0;
+}
